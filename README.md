@@ -205,7 +205,7 @@ http://localhost:8000
 </p>
 
 <p align="center">
-  <img src="images/export.png" width="900" alt="Export Data">
+  <img width="793" height="440" alt="image" src="https://github.com/user-attachments/assets/5109da1b-f975-4c2e-a9cd-57ca70c121d6" />
 </p>
 
 > Save your screenshots inside an **images/** folder at the root of the project.
