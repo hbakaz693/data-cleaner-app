@@ -254,11 +254,11 @@ This project is licensed under the MIT License.
 * React & FastAPI Developer
 
 <p align="left">
-  <a href="https://github.com/your-github-username">
+  <a href="https://github.com/hbakaz693">
     <img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github">
   </a>
 
   <a href="https://www.linkedin.com/in/your-linkedin">
-    <img src="https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin">
+    <img src="https://www.linkedin.com/in/hicham-bakaz-155652396/">
   </a>
 </p>
