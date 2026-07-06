@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [file, setFile] = useState(null);
-  const [columns, setColumns] = useState([]);
-  const [rows, setRows] = useState([]);
-  const [totalRows, setTotalRows] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [cleaningErrors, setCleaningErrors] = useState([]);
-  const [cleaningSummary, setCleaningSummary] = useState(null);
-  const [showExportModal, setShowExportModal] = useState(false);
-  const [exportFormat, setExportFormat] = useState("csv");
-
- 
+  const [file, setFile] = useState<File | null>(null);
+  const [columns, setColumns] = useState<string[]>([]);
+  const [rows, setRows] = useState<any[]>([]);
+  const [totalRows, setTotalRows] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [cleaningErrors, setCleaningErrors] = useState<any[]>([]);
+  const [cleaningSummary, setCleaningSummary] = useState<any>(null);
+  const [showExportModal, setShowExportModal] = useState<boolean>(false);
+  const [exportFormat, setExportFormat] = useState<string>("csv");
 
   const handleUpload = async () => {
     if (!file) {
@@ -66,7 +64,7 @@ function App() {
           let errorMessage = `🧹 Nettoyage terminé !\n`;
           errorMessage += `Lignes supprimées : ${data.summary.rows_removed}\n`;
           errorMessage += `Erreurs trouvées : ${data.total_errors}\n\n`;
-          data.errors_found.forEach((error, index) => {
+          data.errors_found.forEach((error: any, index: number) => {
             errorMessage += `${index + 1}. ${error.message}\n`;
           });
           alert(errorMessage);
@@ -88,7 +86,6 @@ function App() {
     }
   };
 
-  // Nouvelle fonction pour exporter avec le format choisi
   const handleExport = async () => {
     setLoading(true);
     try {
@@ -97,18 +94,11 @@ function App() {
       });
 
       if (response.ok) {
-        // Récupérer le blob
         const blob = await response.blob();
-        
-        // Créer un lien de téléchargement
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        
-        // Déterminer l'extension du fichier
         const extension = exportFormat === "csv" ? "csv" : "xlsx";
-        const contentType = exportFormat === "csv" ? "text/csv" : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-        
         a.download = `donnees_exportees.${extension}`;
         document.body.appendChild(a);
         a.click();
@@ -158,12 +148,16 @@ function App() {
           📊 Page d'accueil - Gestion des données
         </h1>
 
-        {/* Zone d'import */}
         <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6 text-center hover:border-blue-500 transition">
           <input
             type="file"
             accept=".xlsx,.xls,.csv"
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => {
+              const selectedFile = e.target.files?.[0];
+              if (selectedFile) {
+                setFile(selectedFile);
+              }
+            }}
             className="hidden"
             id="fileInput"
           />
@@ -188,7 +182,6 @@ function App() {
           </button>
         </div>
 
-        {/* Statistiques */}
         {totalRows > 0 && (
           <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
             <p className="text-sm text-blue-700">
@@ -205,7 +198,6 @@ function App() {
           </div>
         )}
 
-        {/* Aperçu des données */}
         <div className="mb-6">
           <h2 className="text-xl font-semibold text-gray-700 mb-3">
             📋 Aperçu des données ({rows.length} lignes)
@@ -245,7 +237,6 @@ function App() {
           )}
         </div>
 
-        {/* Boutons d'action */}
         <div className="flex flex-wrap gap-4">
           <button
             onClick={handleClean}
@@ -271,7 +262,6 @@ function App() {
           </button>
         </div>
 
-        {/* Liste des erreurs trouvées */}
         {cleaningErrors.length > 0 && (
           <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
             <h3 className="font-semibold text-red-700 mb-2">
@@ -287,7 +277,6 @@ function App() {
           </div>
         )}
 
-        {/* Modal d'export */}
         {showExportModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg p-8 max-w-md w-full shadow-2xl">
