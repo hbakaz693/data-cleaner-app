@@ -98,3 +98,173 @@ Users can:
 | ⚡ Vite | React Build Tool |
 | 📊 Pandas | Data Cleaning |
 | 📁 OpenPyXL | Excel Support |
+
+
+
+# 🏗 Project Architecture
+
+<pre>
+Data-Cleaning-App/
+│
+├── backend/
+│   ├── app.py
+│   ├── routes/
+│   ├── services/
+│   ├── models/
+│   ├── utils/
+│   ├── uploads/
+│   ├── exports/
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── types/
+│   │   ├── assets/
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── README.md
+└── LICENSE
+</pre>
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+<pre>
+git clone https://github.com/your-username/data-cleaning-app.git
+cd data-cleaning-app
+</pre>
+
+---
+
+# 🚀 Backend Setup
+
+Navigate to the backend directory:
+
+<pre>
+cd backend
+</pre>
+
+Create a virtual environment:
+
+<pre>
+python -m venv venv
+</pre>
+
+Activate the virtual environment:
+
+<b>Windows</b>
+
+<pre>
+venv\Scripts\activate
+</pre>
+
+<b>Linux / macOS</b>
+
+<pre>
+source venv/bin/activate
+</pre>
+
+Install the required dependencies:
+
+<pre>
+pip install -r requirements.txt
+</pre>
+
+Run the FastAPI server:
+
+<pre>
+uvicorn app:app --reload
+</pre>
+
+Backend URL:
+
+<pre>
+http://localhost:8000
+</pre>
+
+---
+
+# 💻 Frontend Setup
+
+Navigate to the frontend directory:
+
+<pre>
+cd frontend
+</pre>
+
+Install dependencies:
+
+<pre>
+npm install
+</pre>
+
+Start the React application:
+
+<pre>
+npm run dev
+</pre>
+
+Frontend URL:
+
+<pre>
+http://localhost:5173
+</pre>
+
+---
+
+# 🌐 API Endpoints
+
+<table>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><b>GET</b></td>
+<td>/</td>
+<td>Test API connection</td>
+</tr>
+
+<tr>
+<td><b>POST</b></td>
+<td>/upload</td>
+<td>Upload an Excel or CSV file</td>
+</tr>
+
+<tr>
+<td><b>POST</b></td>
+<td>/clean</td>
+<td>Clean the uploaded dataset</td>
+</tr>
+
+<tr>
+<td><b>POST</b></td>
+<td>/export?format=csv</td>
+<td>Export cleaned data as CSV</td>
+</tr>
+
+<tr>
+<td><b>POST</b></td>
+<td>/export?format=excel</td>
+<td>Export cleaned data as Excel (.xlsx)</td>
+</tr>
+
+<tr>
+<td><b>POST</b></td>
+<td>/reset</td>
+<td>Reset uploaded data</td>
+</tr>
+
+</table>
