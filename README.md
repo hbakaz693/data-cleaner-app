@@ -179,3 +179,86 @@ http://localhost:8000
 </tr>
 
 </table>
+
+
+
+# 📖 How to Use
+
+1. Launch the backend server.
+2. Start the frontend application.
+3. Upload an Excel or CSV file.
+4. Preview the imported dataset.
+5. Click **Clean Data** to detect and remove invalid entries.
+6. Review the cleaning summary and detected errors.
+7. Export the cleaned dataset as CSV or Excel.
+
+---
+
+# 📸 Screenshots
+
+<p align="center">
+  <img src="images/home.png" width="900" alt="Home Page">
+</p>
+
+<p align="center">
+  <img src="images/cleaning.png" width="900" alt="Cleaning Results">
+</p>
+
+<p align="center">
+  <img src="images/export.png" width="900" alt="Export Data">
+</p>
+
+> Save your screenshots inside an **images/** folder at the root of the project.
+
+---
+
+# 🚀 Future Improvements
+
+* User authentication
+* Drag & Drop file upload
+* Data visualization with charts
+* AI-powered data cleaning suggestions
+* Support for larger datasets
+* Dark mode
+* Docker deployment
+* Cloud storage integration
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+If you would like to improve this project:
+
+* Fork the repository
+* Create a new feature branch
+* Commit your changes
+* Push your branch
+* Open a Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Hicham Bakaz**
+
+* AI & Data Science Student
+* Python Developer
+* React & FastAPI Developer
+
+<p align="left">
+  <a href="https://github.com/your-github-username">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github">
+  </a>
+
+  <a href="https://www.linkedin.com/in/your-linkedin">
+    <img src="https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin">
+  </a>
+</p>
