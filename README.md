@@ -107,23 +107,12 @@ Users can:
 Data-Cleaning-App/
 │
 ├── backend/
-│   ├── app.py
-│   ├── routes/
-│   ├── services/
-│   ├── models/
-│   ├── utils/
-│   ├── uploads/
-│   ├── exports/
+│   ├── main.py
 │   └── requirements.txt
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── types/
-│   │   ├── assets/
 │   │   ├── App.tsx
 │   │   └── main.tsx
 │   ├── package.json
@@ -135,56 +124,6 @@ Data-Cleaning-App/
 
 ---
 
-# ⚙️ Installation
-
-Clone the repository:
-
-<pre>
-git clone https://github.com/your-username/data-cleaning-app.git
-cd data-cleaning-app
-</pre>
-
----
-
-# 🚀 Backend Setup
-
-Navigate to the backend directory:
-
-<pre>
-cd backend
-</pre>
-
-Create a virtual environment:
-
-<pre>
-python -m venv venv
-</pre>
-
-Activate the virtual environment:
-
-<b>Windows</b>
-
-<pre>
-venv\Scripts\activate
-</pre>
-
-<b>Linux / macOS</b>
-
-<pre>
-source venv/bin/activate
-</pre>
-
-Install the required dependencies:
-
-<pre>
-pip install -r requirements.txt
-</pre>
-
-Run the FastAPI server:
-
-<pre>
-uvicorn main:app --reload
-</pre>
 
 Backend URL:
 
@@ -192,35 +131,7 @@ Backend URL:
 http://localhost:8000
 </pre>
 
----
 
-# 💻 Frontend Setup
-
-Navigate to the frontend directory:
-
-<pre>
-cd frontend
-</pre>
-
-Install dependencies:
-
-<pre>
-npm install
-</pre>
-
-Start the React application:
-
-<pre>
-npm run dev
-</pre>
-
-Frontend URL:
-
-<pre>
-http://localhost:5173
-</pre>
-
----
 
 # 🌐 API Endpoints
 
