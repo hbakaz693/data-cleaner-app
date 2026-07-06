@@ -258,7 +258,4 @@ This project is licensed under the MIT License.
     <img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github">
   </a>
 
-  <a href="https://www.linkedin.com/in/your-linkedin">
-    <img src="https://www.linkedin.com/in/hicham-bakaz-155652396/">
-  </a>
-</p>
+ <a href="https://www.linkedin.com/in/hicham-bakaz-155652396/"> <img src="https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin"> </a> </p>
