@@ -197,7 +197,7 @@ http://localhost:8000
 # 📸 Screenshots
 
 <p align="center">
-  <img src="images/home.png" width="900" alt="Home Page">
+  <img width="789" height="433" alt="image" src="https://github.com/user-attachments/assets/6532d5c8-865b-46b6-913d-0d1a1f07d63c" />
 </p>
 
 <p align="center">
