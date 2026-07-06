@@ -1,7 +1,0 @@
-uvicorn
-pandas
-openpyxl
-python-multipart
-
-
-py -3.11 -m uvicorn main:app --reload
