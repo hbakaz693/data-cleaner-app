@@ -201,7 +201,7 @@ http://localhost:8000
 </p>
 
 <p align="center">
-  <img src="images/cleaning.png" width="900" alt="Cleaning Results">
+  <img width="788" height="392" alt="image" src="https://github.com/user-attachments/assets/403ae604-d727-4a61-8de7-851dfe25d1b4" />
 </p>
 
 <p align="center">
